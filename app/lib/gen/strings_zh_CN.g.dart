@@ -46,6 +46,7 @@ class _StringsZhCn extends Translations {
 	@override late final _StringsChangelogPageZhCn changelogPage = _StringsChangelogPageZhCn._(_root);
 	@override late final _StringsAliasGeneratorZhCn aliasGenerator = _StringsAliasGeneratorZhCn._(_root);
 	@override late final _StringsDialogsZhCn dialogs = _StringsDialogsZhCn._(_root);
+	@override late final _StringsSanitizationZhCn sanitization = _StringsSanitizationZhCn._(_root);
 	@override late final _StringsTrayZhCn tray = _StringsTrayZhCn._(_root);
 	@override late final _StringsWebZhCn web = _StringsWebZhCn._(_root);
 	@override late final _StringsAssetPickerZhCn assetPicker = _StringsAssetPickerZhCn._(_root);
@@ -118,7 +119,7 @@ class _StringsSendTabZhCn extends _StringsSendTabEn {
 	@override String get title => '发送';
 	@override late final _StringsSendTabSelectionZhCn selection = _StringsSendTabSelectionZhCn._(_root);
 	@override late final _StringsSendTabPickerZhCn picker = _StringsSendTabPickerZhCn._(_root);
-	@override String get shareIntentInfo => '你也可以使用你的移动设备中的“分享”功能来更简单的选择文件';
+	@override String get shareIntentInfo => '你也可以通过移动设备中的“分享”功能更简单地选择文件。';
 	@override String get nearbyDevices => '附近的设备';
 	@override String get thisDevice => '这台设备';
 	@override String get scan => '扫描设备';
@@ -221,9 +222,9 @@ class _StringsReceiveOptionsPageZhCn extends _StringsReceiveOptionsPageEn {
 
 	// Translations
 	@override String get title => '设置';
-	@override String get destination => '${_root.settingsTab.receive.destination}';
+	@override String get destination => _root.settingsTab.receive.destination;
 	@override String get appDirectory => '(LocalSend 文件夹)';
-	@override String get saveToGallery => '${_root.settingsTab.receive.saveToGallery}';
+	@override String get saveToGallery => _root.settingsTab.receive.saveToGallery;
 	@override String get saveToGalleryOff => '由于存在目录，已自动关闭。';
 }
 
@@ -234,9 +235,9 @@ class _StringsSendPageZhCn extends _StringsSendPageEn {
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get waiting => '等待响应中...';
-	@override String get rejected => '对方拒绝了请求';
-	@override String get busy => '对方正在处理另一个请求';
+	@override String get waiting => '等待响应中……';
+	@override String get rejected => '对方拒绝了请求。';
+	@override String get busy => '对方正在处理另一个请求。';
 }
 
 // Path: progressPage
@@ -260,18 +261,18 @@ class _StringsWebSharePageZhCn extends _StringsWebSharePageEn {
 
 	// Translations
 	@override String get title => '分享为链接';
-	@override String get loading => '正在启动服务器...';
-	@override String get stopping => '正在停止服务器...';
+	@override String get loading => '正在启动服务器……';
+	@override String get stopping => '正在停止服务器……';
 	@override String get error => '在启动服务器过程中发生了错误';
 	@override String openLink({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('zh'))(n,
-		one: '在浏览器中打开本链接:',
-		other: '在浏览器中打开其中的一个链接:',
+		one: '在浏览器中打开链接：',
+		other: '在浏览器中打开其中一个链接：',
 	);
 	@override String get requests => '请求';
 	@override String get noRequests => '尚无请求。';
-	@override String get encryption => '${_root.settingsTab.network.encryption}';
+	@override String get encryption => _root.settingsTab.network.encryption;
 	@override String get autoAccept => '自动接受请求';
-	@override String get encryptionHint => 'LocalSend 使用自签名证书，您需要在浏览器中接受它。';
+	@override String get encryptionHint => 'LocalSend 使用自签名证书，您需要在浏览器中允许它。';
 	@override String pendingRequests({required Object n}) => '待处理请求: ${n}';
 }
 
@@ -284,7 +285,7 @@ class _StringsAboutPageZhCn extends _StringsAboutPageEn {
 	// Translations
 	@override String get title => '关于 LocalSend';
 	@override List<String> get description => [
-		'LocalSend 是一款免费的开源应用程序，可让您通过本地网络与附近的设备安全地共享文件和信息，而无需互联网连接。',
+		'LocalSend 是一款免费的开源应用程序，可让您通过本地网络与附近的设备安全地分享文件和信息，而无需互联网连接。',
 		'本程序可在 Android、iOS、macOS、Windows 和 Linux 上使用。您可以在官方主页找到所有下载选项。',
 	];
 	@override String get author => '作者';
@@ -323,6 +324,75 @@ class _StringsAliasGeneratorZhCn extends _StringsAliasGeneratorEn {
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
+	@override List<String> get adjectives => [
+		'迷人',
+		'美丽',
+		'巨大',
+		'明亮',
+		'干净',
+		'聪明',
+		'帅气',
+		'可爱',
+		'狡猾',
+		'坚定',
+		'有活力',
+		'高效',
+		'极好',
+		'快速',
+		'不错',
+		'新鲜',
+		'好',
+		'华丽',
+		'伟大',
+		'英俊',
+		'炽热',
+		'善良',
+		'诚实',
+		'神秘',
+		'整洁',
+		'开心',
+		'耐心',
+		'漂亮',
+		'强大',
+		'富有',
+		'秘密',
+		'聪明',
+		'稳固',
+		'特别',
+		'战略性',
+		'强大',
+		'整洁',
+		'智慧',
+	];
+	@override List<String> get fruits => [
+		'苹果',
+		'鳄梨',
+		'香蕉',
+		'黑莓',
+		'蓝莓',
+		'西兰花',
+		'胡萝卜',
+		'樱桃',
+		'椰子',
+		'葡萄',
+		'柠檬',
+		'莴苣',
+		'芒果',
+		'甜瓜',
+		'蘑菇',
+		'洋葱',
+		'橙子',
+		'木瓜',
+		'桃子',
+		'梨',
+		'菠萝',
+		'土豆',
+		'南瓜',
+		'覆盆子',
+		'草莓',
+		'番茄',
+	];
+	@override String combination({required Object adjective, required Object fruit}) => '${adjective}的${fruit}';
 }
 
 // Path: dialogs
@@ -356,6 +426,17 @@ class _StringsDialogsZhCn extends _StringsDialogsEn {
 	@override late final _StringsDialogsZoomZhCn zoom = _StringsDialogsZoomZhCn._(_root);
 }
 
+// Path: sanitization
+class _StringsSanitizationZhCn extends _StringsSanitizationEn {
+	_StringsSanitizationZhCn._(_StringsZhCn root) : this._root = root, super._(root);
+
+	@override final _StringsZhCn _root; // ignore: unused_field
+
+	// Translations
+	@override String get empty => '文件名不能为空';
+	@override String get invalid => '文件名包含无效字符';
+}
+
 // Path: tray
 class _StringsTrayZhCn extends _StringsTrayEn {
 	_StringsTrayZhCn._(_StringsZhCn root) : this._root = root, super._(root);
@@ -363,7 +444,7 @@ class _StringsTrayZhCn extends _StringsTrayEn {
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get open => '${_root.general.open}';
+	@override String get open => _root.general.open;
 	@override String get close => '退出 LocalSend';
 }
 
@@ -374,7 +455,7 @@ class _StringsWebZhCn extends _StringsWebEn {
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get waiting => '${_root.sendPage.waiting}';
+	@override String get waiting => _root.sendPage.waiting;
 	@override String get rejected => '已拒绝';
 	@override String get files => '文件';
 	@override String get fileName => '文件名';
@@ -393,15 +474,15 @@ class _StringsAssetPickerZhCn extends _StringsAssetPickerEn {
 	@override String get edit => '编辑';
 	@override String get gifIndicator => 'GIF';
 	@override String get loadFailed => '加载失败';
-	@override String get original => '源文件';
+	@override String get original => '原文件';
 	@override String get preview => '预览';
 	@override String get select => '选择';
 	@override String get emptyList => '清空列表';
-	@override String get unSupportedAssetType => '不支持的文件格式';
+	@override String get unSupportedAssetType => '不支持该文件格式';
 	@override String get unableToAccessAll => '无法访问设备上的所有文件';
 	@override String get viewingLimitedAssetsTip => '应用程序仅能查看可访问的文件和相册。';
 	@override String get changeAccessibleLimitedAssets => '单击以更新可访问文件';
-	@override String get accessAllTip => '应用程序只能访问设备上的部分文件，转到系统设置并允许该应用访问设备上的所有媒体文件。';
+	@override String get accessAllTip => '应用程序只能访问设备上的部分文件，请转到系统设置并允许该应用访问设备上的所有媒体文件。';
 	@override String get goToSystemSettings => '转到系统设置';
 	@override String get accessLimitedAssets => '继续受限访问';
 	@override String get accessiblePathName => '可访问的文件';
@@ -425,7 +506,7 @@ class _StringsReceiveTabInfoBoxZhCn extends _StringsReceiveTabInfoBoxEn {
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get ip => 'IP:';
+	@override String get ip => 'IP：';
 	@override String get port => '端口：';
 	@override String get alias => '别名：';
 }
@@ -477,7 +558,7 @@ class _StringsSettingsTabGeneralZhCn extends _StringsSettingsTabGeneralEn {
 
 	// Translations
 	@override String get title => '通用';
-	@override String get brightness => '亮度';
+	@override String get brightness => '主题';
 	@override late final _StringsSettingsTabGeneralBrightnessOptionsZhCn brightnessOptions = _StringsSettingsTabGeneralBrightnessOptionsZhCn._(_root);
 	@override String get color => '颜色';
 	@override late final _StringsSettingsTabGeneralColorOptionsZhCn colorOptions = _StringsSettingsTabGeneralColorOptionsZhCn._(_root);
@@ -498,7 +579,7 @@ class _StringsSettingsTabReceiveZhCn extends _StringsSettingsTabReceiveEn {
 
 	// Translations
 	@override String get title => '接收';
-	@override String get quickSave => '${_root.general.quickSave}';
+	@override String get quickSave => _root.general.quickSave;
 	@override String get autoFinish => '自动完成';
 	@override String get destination => '保存目录';
 	@override String get downloads => '(下载)';
@@ -514,7 +595,7 @@ class _StringsSettingsTabSendZhCn extends _StringsSettingsTabSendEn {
 
 	// Translations
 	@override String get title => '发送';
-	@override String get shareViaLinkAutoAccept => '通过链接分享: 自动接受';
+	@override String get shareViaLinkAutoAccept => '通过链接分享：自动接受';
 }
 
 // Path: settingsTab.network
@@ -531,7 +612,7 @@ class _StringsSettingsTabNetworkZhCn extends _StringsSettingsTabNetworkEn {
 	@override String get deviceType => '设备类型';
 	@override String get deviceModel => '设备型号';
 	@override String get port => '端口';
-	@override String get discoveryTimeout => '发现超时';
+	@override String get discoveryTimeout => '搜索设备超时';
 	@override String portWarning({required Object defaultPort}) => '由于正在使用自定义端口，你可能不会被其他设备检测到。（默认端口：${defaultPort}）';
 	@override String get encryption => '加密';
 	@override String get multicastGroup => '多播';
@@ -619,7 +700,7 @@ class _StringsDialogsAddressInputZhCn extends _StringsDialogsAddressInputEn {
 
 	// Translations
 	@override String get title => '输入地址';
-	@override String get hashtag => 'Hashtag';
+	@override String get hashtag => '标签';
 	@override String get ip => 'IP 地址';
 	@override String get recentlyUsed => '最近使用：';
 }
@@ -664,7 +745,7 @@ class _StringsDialogsErrorDialogZhCn extends _StringsDialogsErrorDialogEn {
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.general.error}';
+	@override String get title => _root.general.error;
 }
 
 // Path: dialogs.favoriteDialog
@@ -675,7 +756,7 @@ class _StringsDialogsFavoriteDialogZhCn extends _StringsDialogsFavoriteDialogEn 
 
 	// Translations
 	@override String get title => '收藏夹';
-	@override String get noFavorites => '尚未配置收藏夹';
+	@override String get noFavorites => '还没有收藏的设备。';
 	@override String get addFavorite => '新建';
 }
 
@@ -686,8 +767,8 @@ class _StringsDialogsFavoriteDeleteDialogZhCn extends _StringsDialogsFavoriteDel
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '删除收藏夹';
-	@override String content({required Object name}) => '确定要删除收藏夹 "${name}" 吗?';
+	@override String get title => '删除收藏';
+	@override String content({required Object name}) => '确定要取消收藏 "${name}" 吗?';
 }
 
 // Path: dialogs.favoriteEditDialog
@@ -697,10 +778,10 @@ class _StringsDialogsFavoriteEditDialogZhCn extends _StringsDialogsFavoriteEditD
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get titleAdd => '添加收藏夹';
-	@override String get titleEdit => '编辑收藏夹';
+	@override String get titleAdd => '添加到收藏夹';
+	@override String get titleEdit => '设置';
 	@override String get name => '名称';
-	@override String get auto => '(auto)';
+	@override String get auto => '(自动)';
 	@override String get ip => 'IP 地址';
 	@override String get port => '端口';
 }
@@ -739,7 +820,7 @@ class _StringsDialogsHistoryClearDialogZhCn extends _StringsDialogsHistoryClearD
 
 	// Translations
 	@override String get title => '清空历史记录';
-	@override String get content => '您确定要清空全部历史记录吗？';
+	@override String get content => '要清空全部历史记录吗？';
 }
 
 // Path: dialogs.localNetworkUnauthorized
@@ -749,7 +830,7 @@ class _StringsDialogsLocalNetworkUnauthorizedZhCn extends _StringsDialogsLocalNe
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.dialogs.noPermission.title}';
+	@override String get title => _root.dialogs.noPermission.title;
 	@override String get description => 'LocalSend 在没有扫描本地网络的权限的情况下无法找到其他设备。请在设置中授予此权限。';
 	@override String get gotoSettings => '设置';
 }
@@ -830,7 +911,7 @@ class _StringsDialogsQuickSaveNoticeZhCn extends _StringsDialogsQuickSaveNoticeE
 	@override final _StringsZhCn _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.general.quickSave}';
+	@override String get title => _root.general.quickSave;
 	@override String get content => '自动接受所有文件传输请求。请注意，这会让此网络中的所有人都可以向你发送文件。';
 }
 

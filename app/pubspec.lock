@@ -796,6 +796,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.2.2"
+  legalize:
+    dependency: "direct main"
+    description:
+      name: legalize
+      sha256: bc3068aa4f14588575c8b5ba2a9e608c242dad325e7f7c56fedd68adba33526a
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.2"
   lints:
     dependency: transitive
     description:
@@ -1153,34 +1161,34 @@ packages:
     dependency: transitive
     description:
       name: refena
-      sha256: a29603854d785e5259c6fb99268847e918f54463a861accc36cc913daea95cb8
+      sha256: "4feb15e5eaac261d67973c1167628fc89370adf3d759e1ec958587e73fca8d43"
       url: "https://pub.dev"
     source: hosted
-    version: "1.6.1"
+    version: "2.0.0"
   refena_flutter:
     dependency: "direct main"
     description:
       name: refena_flutter
-      sha256: "2bee85271c8d8ced0238d98c1c056dbabfd4af207f9cc248d10af5a37820ae3e"
+      sha256: "04a2c9b349ab1317173569f6535462bb113ca7a9cdb88a9d617a9acade3f0f52"
       url: "https://pub.dev"
     source: hosted
-    version: "1.6.0"
+    version: "2.0.0"
   refena_inspector:
     dependency: "direct dev"
     description:
       name: refena_inspector
-      sha256: "495822cc8142b3a5826b5f17061b8ea60aa4b0fd7758fdec9746b85cbd61895d"
+      sha256: c682581e2c2e8f641f5366cd079c0db1cab33a58ec160464d03d02019e92acd2
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.0"
+    version: "2.0.0"
   refena_inspector_client:
     dependency: "direct main"
     description:
       name: refena_inspector_client
-      sha256: f01636eb2c9609e9a5df5591132df5d3008a4a397b70166bc18c464af09880a6
+      sha256: f211414cd0c45a18fa482b8fbc0d8ee3b0383cda2979f127320134c4ffa8cafb
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.0"
+    version: "2.0.0"
   routerino:
     dependency: "direct main"
     description:
@@ -1358,26 +1366,26 @@ packages:
     dependency: "direct main"
     description:
       name: slang
-      sha256: "95dee03eb3fd1b36c99f365d4eace270a0d83c6148f8e7d1057806ef60cfaf12"
+      sha256: "0d8a8cbfd7858ed2bd9164a79bfb664ea83f1e124740b28acd0618757fc87ecc"
       url: "https://pub.dev"
     source: hosted
-    version: "3.29.0"
+    version: "3.31.0"
   slang_build_runner:
     dependency: "direct dev"
     description:
       name: slang_build_runner
-      sha256: "929ea4bf24f11e09afd2b01abd658f550da7eb4039ae83d91bc220f942e18cb3"
+      sha256: "6e60160e8000b91824c47221b20d9642e7408287a5a21837ecefc75270197586"
       url: "https://pub.dev"
     source: hosted
-    version: "3.29.0"
+    version: "3.31.0"
   slang_flutter:
     dependency: "direct main"
     description:
       name: slang_flutter
-      sha256: "34c7cf297c608e24d3957a29e75c6790f4dbbfb1a4783d261a6c1e33ede7ad0f"
+      sha256: f8400292be49c11697d94af58d7f7d054c91af759f41ffe71e4e5413871ffc62
       url: "https://pub.dev"
     source: hosted
-    version: "3.29.0"
+    version: "3.31.0"
   slang_gpt:
     dependency: "direct dev"
     description:

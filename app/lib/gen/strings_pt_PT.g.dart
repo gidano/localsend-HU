@@ -46,6 +46,7 @@ class _StringsPtPt extends Translations {
 	@override late final _StringsChangelogPagePtPt changelogPage = _StringsChangelogPagePtPt._(_root);
 	@override late final _StringsAliasGeneratorPtPt aliasGenerator = _StringsAliasGeneratorPtPt._(_root);
 	@override late final _StringsDialogsPtPt dialogs = _StringsDialogsPtPt._(_root);
+	@override late final _StringsSanitizationPtPt sanitization = _StringsSanitizationPtPt._(_root);
 	@override late final _StringsTrayPtPt tray = _StringsTrayPtPt._(_root);
 	@override late final _StringsWebPtPt web = _StringsWebPtPt._(_root);
 	@override late final _StringsAssetPickerPtPt assetPicker = _StringsAssetPickerPtPt._(_root);
@@ -221,9 +222,9 @@ class _StringsReceiveOptionsPagePtPt extends _StringsReceiveOptionsPageEn {
 
 	// Translations
 	@override String get title => 'Opções';
-	@override String get destination => '${_root.settingsTab.receive.destination}';
+	@override String get destination => _root.settingsTab.receive.destination;
 	@override String get appDirectory => '(pasta LocalSend)';
-	@override String get saveToGallery => '${_root.settingsTab.receive.saveToGallery}';
+	@override String get saveToGallery => _root.settingsTab.receive.saveToGallery;
 	@override String get saveToGalleryOff => 'Opção desligada automaticamente pois uma pasta está a ser transferida.';
 }
 
@@ -269,7 +270,7 @@ class _StringsWebSharePagePtPt extends _StringsWebSharePageEn {
 	);
 	@override String get requests => 'Pedidos';
 	@override String get noRequests => 'Nenhum pedido ainda.';
-	@override String get encryption => '${_root.settingsTab.network.encryption}';
+	@override String get encryption => _root.settingsTab.network.encryption;
 	@override String get autoAccept => 'Aceitar pedidos automaticamente';
 	@override String get encryptionHint => 'O LocalSend utiliza um certificado assinado automaticamente. Precisa de aceitá-lo no navegador.';
 	@override String pendingRequests({required Object n}) => 'Pedidos pendentes: ${n}';
@@ -424,10 +425,21 @@ class _StringsDialogsPtPt extends _StringsDialogsEn {
 	@override late final _StringsDialogsNoPermissionPtPt noPermission = _StringsDialogsNoPermissionPtPt._(_root);
 	@override late final _StringsDialogsNotAvailableOnPlatformPtPt notAvailableOnPlatform = _StringsDialogsNotAvailableOnPlatformPtPt._(_root);
 	@override late final _StringsDialogsQrPtPt qr = _StringsDialogsQrPtPt._(_root);
-	@override late final _StringsDialogsZoomPtPt zoom = _StringsDialogsZoomPtPt._(_root);
 	@override late final _StringsDialogsQuickActionsPtPt quickActions = _StringsDialogsQuickActionsPtPt._(_root);
 	@override late final _StringsDialogsQuickSaveNoticePtPt quickSaveNotice = _StringsDialogsQuickSaveNoticePtPt._(_root);
 	@override late final _StringsDialogsSendModeHelpPtPt sendModeHelp = _StringsDialogsSendModeHelpPtPt._(_root);
+	@override late final _StringsDialogsZoomPtPt zoom = _StringsDialogsZoomPtPt._(_root);
+}
+
+// Path: sanitization
+class _StringsSanitizationPtPt extends _StringsSanitizationEn {
+	_StringsSanitizationPtPt._(_StringsPtPt root) : this._root = root, super._(root);
+
+	@override final _StringsPtPt _root; // ignore: unused_field
+
+	// Translations
+	@override String get empty => 'O nome do ficheiro não pode estar em branco';
+	@override String get invalid => 'O nome do ficheiro contém caracteres inválidos';
 }
 
 // Path: tray
@@ -437,7 +449,7 @@ class _StringsTrayPtPt extends _StringsTrayEn {
 	@override final _StringsPtPt _root; // ignore: unused_field
 
 	// Translations
-	@override String get open => '${_root.general.open}';
+	@override String get open => _root.general.open;
 	@override String get close => 'Fechar o LocalSend';
 }
 
@@ -448,7 +460,7 @@ class _StringsWebPtPt extends _StringsWebEn {
 	@override final _StringsPtPt _root; // ignore: unused_field
 
 	// Translations
-	@override String get waiting => '${_root.sendPage.waiting}';
+	@override String get waiting => _root.sendPage.waiting;
 	@override String get rejected => 'Ligação rejeitada';
 	@override String get files => 'Ficheiros';
 	@override String get fileName => 'Nome do ficheiro';
@@ -572,7 +584,7 @@ class _StringsSettingsTabReceivePtPt extends _StringsSettingsTabReceiveEn {
 
 	// Translations
 	@override String get title => 'Recepção';
-	@override String get quickSave => '${_root.general.quickSave}';
+	@override String get quickSave => _root.general.quickSave;
 	@override String get autoFinish => 'Concluir automaticamente';
 	@override String get destination => 'Destino';
 	@override String get downloads => '(Descargas)';
@@ -738,7 +750,7 @@ class _StringsDialogsErrorDialogPtPt extends _StringsDialogsErrorDialogEn {
 	@override final _StringsPtPt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.general.error}';
+	@override String get title => _root.general.error;
 }
 
 // Path: dialogs.favoriteDialog
@@ -823,7 +835,7 @@ class _StringsDialogsLocalNetworkUnauthorizedPtPt extends _StringsDialogsLocalNe
 	@override final _StringsPtPt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.dialogs.noPermission.title}';
+	@override String get title => _root.dialogs.noPermission.title;
 	@override String get description => 'O LocalSend não consegue encontrar outros dispositivos sem ter a permissão para analisar a rede local. Conceda esta permissão nas definições.';
 	@override String get gotoSettings => 'Definições';
 }
@@ -882,16 +894,6 @@ class _StringsDialogsQrPtPt extends _StringsDialogsQrEn {
 	@override String get title => 'QR Code';
 }
 
-// Path: dialogs.zoom
-class _StringsDialogsZoomPtPt extends _StringsDialogsZoomEn {
-	_StringsDialogsZoomPtPt._(_StringsPtPt root) : this._root = root, super._(root);
-
-	@override final _StringsPtPt _root; // ignore: unused_field
-
-	// Translations
-	@override String get title => 'URL';
-}
-
 // Path: dialogs.quickActions
 class _StringsDialogsQuickActionsPtPt extends _StringsDialogsQuickActionsEn {
 	_StringsDialogsQuickActionsPtPt._(_StringsPtPt root) : this._root = root, super._(root);
@@ -914,7 +916,7 @@ class _StringsDialogsQuickSaveNoticePtPt extends _StringsDialogsQuickSaveNoticeE
 	@override final _StringsPtPt _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.general.quickSave}';
+	@override String get title => _root.general.quickSave;
 	@override String get content => 'Pedidos de ficheiros são aceites automaticamente. Tenha em atenção que todas as pessoas na rede local podem enviar-lhe ficheiros.';
 }
 
@@ -929,6 +931,16 @@ class _StringsDialogsSendModeHelpPtPt extends _StringsDialogsSendModeHelpEn {
 	@override String get single => 'Envia ficheiros para um destinatário. A seleção será apagada após a conclusão da transferência dos ficheiros.';
 	@override String get multiple => 'Envia ficheiros para vários destinatários. A seleção não será apagada.';
 	@override String get link => 'Os destinatários que não têm o LocalSend instalado podem descarregar os ficheiros selecionados abrindo o link fornecido no navegador.';
+}
+
+// Path: dialogs.zoom
+class _StringsDialogsZoomPtPt extends _StringsDialogsZoomEn {
+	_StringsDialogsZoomPtPt._(_StringsPtPt root) : this._root = root, super._(root);
+
+	@override final _StringsPtPt _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'URL';
 }
 
 // Path: settingsTab.general.brightnessOptions

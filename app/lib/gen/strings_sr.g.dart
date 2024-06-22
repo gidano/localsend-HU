@@ -46,6 +46,7 @@ class _StringsSr extends Translations {
 	@override late final _StringsChangelogPageSr changelogPage = _StringsChangelogPageSr._(_root);
 	@override late final _StringsAliasGeneratorSr aliasGenerator = _StringsAliasGeneratorSr._(_root);
 	@override late final _StringsDialogsSr dialogs = _StringsDialogsSr._(_root);
+	@override late final _StringsSanitizationSr sanitization = _StringsSanitizationSr._(_root);
 	@override late final _StringsTraySr tray = _StringsTraySr._(_root);
 	@override late final _StringsWebSr web = _StringsWebSr._(_root);
 	@override late final _StringsAssetPickerSr assetPicker = _StringsAssetPickerSr._(_root);
@@ -72,14 +73,14 @@ class _StringsGeneralSr extends _StringsGeneralEn {
 	@override String get done => 'Gotovo';
 	@override String get delete => 'Izbriši';
 	@override String get edit => 'Izmeni';
-	@override String get error => 'Grešla';
+	@override String get error => 'Greška';
 	@override String get example => 'Primer';
 	@override String get files => 'Fajlovi';
 	@override String get finished => 'Završeno';
 	@override String get hide => 'Sakrij';
 	@override String get off => 'Isključeno';
 	@override String get offline => 'Offline';
-	@override String get on => 'On';
+	@override String get on => 'Uključeno';
 	@override String get online => 'Online';
 	@override String get open => 'Otvori';
 	@override String get queue => 'Stavi u Queue';
@@ -221,9 +222,9 @@ class _StringsReceiveOptionsPageSr extends _StringsReceiveOptionsPageEn {
 
 	// Translations
 	@override String get title => 'Opcije';
-	@override String get destination => '${_root.settingsTab.receive.destination}';
+	@override String get destination => _root.settingsTab.receive.destination;
 	@override String get appDirectory => '(LocalSend folder)';
-	@override String get saveToGallery => '${_root.settingsTab.receive.saveToGallery}';
+	@override String get saveToGallery => _root.settingsTab.receive.saveToGallery;
 	@override String get saveToGalleryOff => 'Isključeno automatski zato što postoje folderi.';
 }
 
@@ -269,7 +270,7 @@ class _StringsWebSharePageSr extends _StringsWebSharePageEn {
 	);
 	@override String get requests => 'Zahtevi';
 	@override String get noRequests => 'Nema zahteva još uvek.';
-	@override String get encryption => '${_root.settingsTab.network.encryption}';
+	@override String get encryption => _root.settingsTab.network.encryption;
 	@override String get autoAccept => 'Automatski prihvati zahteve';
 	@override String get encryptionHint => 'LocalSend koristi sertifikate koji su self-signed. Morate da prihvatite to u browseru.';
 	@override String pendingRequests({required Object n}) => 'Zahtevi na čekanju: ${n}';
@@ -424,6 +425,18 @@ class _StringsDialogsSr extends _StringsDialogsEn {
 	@override late final _StringsDialogsQuickActionsSr quickActions = _StringsDialogsQuickActionsSr._(_root);
 	@override late final _StringsDialogsQuickSaveNoticeSr quickSaveNotice = _StringsDialogsQuickSaveNoticeSr._(_root);
 	@override late final _StringsDialogsSendModeHelpSr sendModeHelp = _StringsDialogsSendModeHelpSr._(_root);
+	@override late final _StringsDialogsZoomSr zoom = _StringsDialogsZoomSr._(_root);
+}
+
+// Path: sanitization
+class _StringsSanitizationSr extends _StringsSanitizationEn {
+	_StringsSanitizationSr._(_StringsSr root) : this._root = root, super._(root);
+
+	@override final _StringsSr _root; // ignore: unused_field
+
+	// Translations
+	@override String get empty => 'Ime fajla ne može biti prazno';
+	@override String get invalid => 'Ime fajla sadrži nedozvoljene karaktere';
 }
 
 // Path: tray
@@ -433,7 +446,7 @@ class _StringsTraySr extends _StringsTrayEn {
 	@override final _StringsSr _root; // ignore: unused_field
 
 	// Translations
-	@override String get open => '${_root.general.open}';
+	@override String get open => _root.general.open;
 	@override String get close => 'Quit LocalSend';
 }
 
@@ -444,7 +457,7 @@ class _StringsWebSr extends _StringsWebEn {
 	@override final _StringsSr _root; // ignore: unused_field
 
 	// Translations
-	@override String get waiting => '${_root.sendPage.waiting}';
+	@override String get waiting => _root.sendPage.waiting;
 	@override String get rejected => 'Odbijeno';
 	@override String get files => 'Fajlovi';
 	@override String get fileName => 'Ime fajla';
@@ -568,7 +581,7 @@ class _StringsSettingsTabReceiveSr extends _StringsSettingsTabReceiveEn {
 
 	// Translations
 	@override String get title => 'Primanje';
-	@override String get quickSave => '${_root.general.quickSave}';
+	@override String get quickSave => _root.general.quickSave;
 	@override String get autoFinish => 'Automatski završi';
 	@override String get destination => 'Destinacija';
 	@override String get downloads => '(Downloads)';
@@ -601,6 +614,7 @@ class _StringsSettingsTabNetworkSr extends _StringsSettingsTabNetworkEn {
 	@override String get deviceType => 'Tip uredjaja';
 	@override String get deviceModel => 'Model uredjaja';
 	@override String get port => 'Port';
+	@override String get discoveryTimeout => 'Otkrivanje otkazano';
 	@override String portWarning({required Object defaultPort}) => 'Možda nećete biti pronadjeni od strane drugih uredjaja jer koristite custom Port.(default: ${defaultPort})';
 	@override String get encryption => 'Enkripcija';
 	@override String get multicastGroup => 'Multicast';
@@ -733,7 +747,7 @@ class _StringsDialogsErrorDialogSr extends _StringsDialogsErrorDialogEn {
 	@override final _StringsSr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.general.error}';
+	@override String get title => _root.general.error;
 }
 
 // Path: dialogs.favoriteDialog
@@ -818,7 +832,7 @@ class _StringsDialogsLocalNetworkUnauthorizedSr extends _StringsDialogsLocalNetw
 	@override final _StringsSr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.dialogs.noPermission.title}';
+	@override String get title => _root.dialogs.noPermission.title;
 	@override String get description => 'LocalSend ne može da nadje druge uredjaje bez dozvole da skenira lokalnu mrežu. Molim dodajte ovu dozvolu u Podešavanja.';
 	@override String get gotoSettings => 'Podešavanja';
 }
@@ -899,7 +913,7 @@ class _StringsDialogsQuickSaveNoticeSr extends _StringsDialogsQuickSaveNoticeEn 
 	@override final _StringsSr _root; // ignore: unused_field
 
 	// Translations
-	@override String get title => '${_root.general.quickSave}';
+	@override String get title => _root.general.quickSave;
 	@override String get content => 'Zahtevi za slanje fajlova su automatski prihvaćeni. Primite k znanju da bilo ko na lokalnoj mreži može da vam pošalje fajl.';
 }
 
@@ -914,6 +928,16 @@ class _StringsDialogsSendModeHelpSr extends _StringsDialogsSendModeHelpEn {
 	@override String get single => 'Pošalji fajlove jednom primaocu. Selekcija će biti resetovana nakon završenog slanja.';
 	@override String get multiple => 'Pošalji fajlove za više primalaca. Selekcija neće biti resetovana nakon završenog slanja.';
 	@override String get link => 'Primaoci koji nemaju LocalSend instaliran, mogu da download-uju selektovane fajlove preko Linka u browseru.';
+}
+
+// Path: dialogs.zoom
+class _StringsDialogsZoomSr extends _StringsDialogsZoomEn {
+	_StringsDialogsZoomSr._(_StringsSr root) : this._root = root, super._(root);
+
+	@override final _StringsSr _root; // ignore: unused_field
+
+	// Translations
+	@override String get title => 'URL';
 }
 
 // Path: settingsTab.general.brightnessOptions
