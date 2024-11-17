@@ -8,6 +8,7 @@ import 'package:common/model/dto/file_dto.dart';
 import 'package:common/model/dto/info_dto.dart';
 import 'package:common/model/dto/receive_request_response_dto.dart';
 import 'package:common/model/file_type.dart';
+import 'package:common/util/stream.dart';
 import 'package:localsend_app/gen/assets.gen.dart';
 import 'package:localsend_app/gen/strings.g.dart';
 import 'package:localsend_app/model/cross_file.dart';
@@ -19,7 +20,6 @@ import 'package:localsend_app/provider/network/server/controller/common.dart';
 import 'package:localsend_app/provider/network/server/server_utils.dart';
 import 'package:localsend_app/provider/settings_provider.dart';
 import 'package:localsend_app/util/simple_server.dart';
-import 'package:localsend_app/util/stream.dart';
 import 'package:uri_content/uri_content.dart';
 import 'package:uuid/uuid.dart';
 
@@ -220,7 +220,10 @@ class SendController {
         });
       } else {
         final path = file.path!;
-        final fileStream = path.startsWith('content://') ? UriContent().getContentStream(Uri.parse(file.path!)) : File(file.path!).openRead();
+        final tmpfile = File(file.path!);
+        request.response.headers.set('content-length', '${tmpfile.lengthSync()}');
+
+        final fileStream = path.startsWith('content://') ? UriContent().getContentStream(Uri.parse(file.path!)) : tmpfile.openRead();
         final (streamController, subscription) = fileStream.digested();
 
         await request.response.addStream(streamController.stream).then((_) {

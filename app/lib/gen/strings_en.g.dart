@@ -248,7 +248,7 @@ class TranslationsSendPageEn {
   final Translations _root; // ignore: unused_field
 
   // Translations
-  String get waiting => 'Waiting for response...';
+  String get waiting => 'Waiting for response…';
   String get rejected => 'The recipient has rejected the request.';
   String get tooManyAttempts => _root.web.tooManyAttempts;
   String get busy => 'The recipient is busy with another request.';
@@ -275,8 +275,8 @@ class TranslationsWebSharePageEn {
 
   // Translations
   String get title => 'Share via link';
-  String get loading => 'Starting server...';
-  String get stopping => 'Stopping server...';
+  String get loading => 'Starting server…';
+  String get stopping => 'Stopping server…';
   String get error => 'An error occurred while starting the server.';
   String openLink({required num n}) => (_root.$meta.cardinalResolver ?? PluralResolvers.cardinal('en'))(
         n,
@@ -716,7 +716,7 @@ class TranslationsTroubleshootPageNoConnectionEn {
   // Translations
   String get symptom => 'Both devices cannot discover each other nor can they share files.';
   String get solution =>
-      'Does the problem exist on both sides? If so, you need to make sure that both devices are on the same Wi-Fi network and share the same configuration (port, multicast address, encryption). The Wi-Fi network may not allow communication between participants (AP isolation). In this case, this option must be enabled on the router.';
+      'Does the problem exist on both sides? If so, you need to make sure that both devices are on the same Wi-Fi network and share the same configuration (port, multicast address, encryption). The Wi-Fi network may not allow communication between participants due to Access Point (AP) Isolation. In this case, this option must be disabled on the router.';
 }
 
 // Path: receiveHistoryPage.entryActions
@@ -1001,8 +1001,8 @@ class TranslationsDialogsQuickSaveFromFavoritesNoticeEn {
   String get title => _root.general.quickSaveFromFavorites;
   List<String> get content => [
         'File requests are now accepted automatically from devices in your favorites list.',
-        'Warning: This is currently not entirely secure because a hacker who knows the fingerprint of your favorite devices can still send you files.',
-        'However, this option is still more secure than allowing any device.',
+        'Warning! Currently, this is not entirely secure, as a hacker who has the fingerprint of any device from your favorites list can send you files without restriction.',
+        'However, this option is still safer than allowing all users on the local network to send you files without restriction.',
       ];
 }
 
